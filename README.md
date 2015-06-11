@@ -15,3 +15,4 @@ If we can achieve the basic features and still have additional time, we will con
  * [x] Calendar to show activities from the past. 
  * [x] Add notes
  * [x] See common connections via Linkedin
+ * [x] Send and receive messages
