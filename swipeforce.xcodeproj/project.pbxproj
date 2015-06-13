@@ -16,6 +16,7 @@
 		8615C9831B2CC47400AC0602 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615C9821B2CC47400AC0602 /* DetailViewController.swift */; };
 		8615C9851B2CC48800AC0602 /* MainCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615C9841B2CC48800AC0602 /* MainCardViewController.swift */; };
 		8615C9871B2CC49500AC0602 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615C9861B2CC49500AC0602 /* ListViewController.swift */; };
+		8615C98A1B2CC66000AC0602 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615C9891B2CC66000AC0602 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		8615C9821B2CC47400AC0602 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8615C9841B2CC48800AC0602 /* MainCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCardViewController.swift; sourceTree = "<group>"; };
 		8615C9861B2CC49500AC0602 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		8615C9891B2CC66000AC0602 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				8615C95F1B2CC35B00AC0602 /* swipeforce */,
 				8615C9751B2CC35B00AC0602 /* swipeforceTests */,
 				8615C95E1B2CC35B00AC0602 /* Products */,
+				8615C9891B2CC66000AC0602 /* Common.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -233,6 +236,7 @@
 				8615C9851B2CC48800AC0602 /* MainCardViewController.swift in Sources */,
 				8615C9651B2CC35B00AC0602 /* ViewController.swift in Sources */,
 				8615C9871B2CC49500AC0602 /* ListViewController.swift in Sources */,
+				8615C98A1B2CC66000AC0602 /* Common.swift in Sources */,
 				8615C9631B2CC35B00AC0602 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
