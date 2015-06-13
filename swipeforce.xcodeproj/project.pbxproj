@@ -13,6 +13,9 @@
 		8615C96A1B2CC35B00AC0602 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8615C9691B2CC35B00AC0602 /* Images.xcassets */; };
 		8615C96D1B2CC35B00AC0602 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8615C96B1B2CC35B00AC0602 /* LaunchScreen.xib */; };
 		8615C9791B2CC35B00AC0602 /* swipeforceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615C9781B2CC35B00AC0602 /* swipeforceTests.swift */; };
+		8615C9831B2CC47400AC0602 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615C9821B2CC47400AC0602 /* DetailViewController.swift */; };
+		8615C9851B2CC48800AC0602 /* MainCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615C9841B2CC48800AC0602 /* MainCardViewController.swift */; };
+		8615C9871B2CC49500AC0602 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615C9861B2CC49500AC0602 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		8615C9721B2CC35B00AC0602 /* swipeforceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swipeforceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8615C9771B2CC35B00AC0602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8615C9781B2CC35B00AC0602 /* swipeforceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swipeforceTests.swift; sourceTree = "<group>"; };
+		8615C9821B2CC47400AC0602 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8615C9841B2CC48800AC0602 /* MainCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCardViewController.swift; sourceTree = "<group>"; };
+		8615C9861B2CC49500AC0602 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 				8615C9621B2CC35B00AC0602 /* AppDelegate.swift */,
 				8615C9641B2CC35B00AC0602 /* ViewController.swift */,
 				8615C9661B2CC35B00AC0602 /* Main.storyboard */,
+				8615C9881B2CC4A100AC0602 /* Controllers */,
 				8615C9691B2CC35B00AC0602 /* Images.xcassets */,
 				8615C96B1B2CC35B00AC0602 /* LaunchScreen.xib */,
 				8615C9601B2CC35B00AC0602 /* Supporting Files */,
@@ -110,6 +117,16 @@
 				8615C9771B2CC35B00AC0602 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8615C9881B2CC4A100AC0602 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8615C9821B2CC47400AC0602 /* DetailViewController.swift */,
+				8615C9841B2CC48800AC0602 /* MainCardViewController.swift */,
+				8615C9861B2CC49500AC0602 /* ListViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8615C9831B2CC47400AC0602 /* DetailViewController.swift in Sources */,
+				8615C9851B2CC48800AC0602 /* MainCardViewController.swift in Sources */,
 				8615C9651B2CC35B00AC0602 /* ViewController.swift in Sources */,
+				8615C9871B2CC49500AC0602 /* ListViewController.swift in Sources */,
 				8615C9631B2CC35B00AC0602 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +425,7 @@
 				8615C97E1B2CC35B00AC0602 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8615C97F1B2CC35B00AC0602 /* Build configuration list for PBXNativeTarget "swipeforceTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +434,7 @@
 				8615C9811B2CC35B00AC0602 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
