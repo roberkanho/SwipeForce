@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="lrn-nX-LSl">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -469,21 +469,6 @@
             </objects>
             <point key="canvasLocation" x="234" y="320"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="XQE-Np-VX9">
-            <objects>
-                <viewController id="nvY-IU-4YU" customClass="ListViewController" customModule="swipeforce" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3L7-7C-NIC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="SRb-WM-1Ms"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1DA-YZ-Opc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="945" y="996"/>
-        </scene>
         <!--Detail View Controller-->
         <scene sceneID="0Gi-Nl-Lmo">
             <objects>
@@ -770,40 +755,238 @@
             </objects>
             <point key="canvasLocation" x="671" y="320"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="zri-Wx-WDP">
+        <!--List View Controller-->
+        <scene sceneID="TPG-Zq-Ibx">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="SQX-DA-0K6" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="bda-J6-SGH">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
+                <viewController id="bZT-Vz-JsT" customClass="ListViewController" customModule="SwipeForce_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5ov-2c-KMX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Background" id="bTO-UN-Jxz">
+                                <rect key="frame" x="0.0" y="-1" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="fH2-ov-6BQ">
+                                <rect key="frame" x="0.0" y="100" width="640" height="468"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ListCell" rowHeight="80" id="yRa-C5-Qyd" customClass="ListCell" customModule="SwipeForce_List" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="22" width="640" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yRa-C5-Qyd" id="lMV-z1-o43">
+                                            <rect key="frame" x="0.0" y="0.0" width="640" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6ar-fU-TpW">
+                                                    <rect key="frame" x="8" y="5" width="73" height="69"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0ax-Dw-cRE">
+                                                    <rect key="frame" x="87" y="32" width="225" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HSs-gy-Llq">
+                                                    <rect key="frame" x="87" y="48" width="225" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SSa-8r-yyV">
+                                                    <rect key="frame" x="87" y="8" width="225" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" id="ion-hb-Ddz">
+                                                    <rect key="frame" x="320" y="0.0" width="320" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Accept_small" id="kn0-tx-Ncg">
+                                                            <rect key="frame" x="255" y="25" width="30" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </imageView>
+                                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Reject_small" id="Za6-cz-a4L">
+                                                            <rect key="frame" x="30" y="25" width="30" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </imageView>
+                                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Later_small30" id="yME-r4-LV7">
+                                                            <rect key="frame" x="30" y="25" width="30" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="acceptIcon" destination="kn0-tx-Ncg" id="dQt-hX-Bei"/>
+                                            <outlet property="cellBackgroundView" destination="ion-hb-Ddz" id="GWb-Zw-La3"/>
+                                            <outlet property="companyLabel" destination="HSs-gy-Llq" id="vfy-42-QKa"/>
+                                            <outlet property="laterIcon" destination="yME-r4-LV7" id="DYi-Xc-2El"/>
+                                            <outlet property="nameLabel" destination="SSa-8r-yyV" id="Iw6-h3-kZw"/>
+                                            <outlet property="rejectIcon" destination="Za6-cz-a4L" id="A0H-3a-Mzf"/>
+                                            <outlet property="titleLabel" destination="0ax-Dw-cRE" id="64c-R5-Y9e"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" id="x9h-z2-EKk">
+                                <rect key="frame" x="210" y="60" width="100" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0mz-Ht-Ct0">
+                                        <rect key="frame" x="15" y="-3" width="80" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                        <state key="normal" title="Accepted">
+                                            <color key="titleColor" red="0.16078431369999999" green="0.70196078429999997" blue="0.4823529412" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="acceptedButtonTap:" destination="bZT-Vz-JsT" eventType="touchUpInside" id="oOL-eY-2t9"/>
+                                        </connections>
+                                    </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Checkmark Copy" id="zEa-3N-EwQ">
+                                        <rect key="frame" x="10" y="8" width="9" height="8"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Checkmark White" id="6LH-vR-1OT">
+                                        <rect key="frame" x="10" y="8" width="9" height="8"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="Rkc-4U-PLE">
+                                <rect key="frame" x="110" y="60" width="100" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EE8-4I-CFV">
+                                        <rect key="frame" x="16" y="-3" width="80" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                        <state key="normal" title="Later">
+                                            <color key="titleColor" red="0.96470588239999999" green="0.65098039220000004" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="laterButtonTap:" destination="bZT-Vz-JsT" eventType="touchUpInside" id="tQV-9C-4hJ"/>
+                                        </connections>
+                                    </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Later_Icon" id="lvH-HC-0ro">
+                                        <rect key="frame" x="25" y="8" width="9" height="9"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Later_Icon_orange" id="3l7-gb-SnW">
+                                        <rect key="frame" x="25" y="8" width="9" height="9"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="Zrq-aR-yO7">
+                                <rect key="frame" x="10" y="60" width="100" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="X Copy 2" id="bCZ-bZ-q0a">
+                                        <rect key="frame" x="14" y="8" width="8" height="8"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zvq-g4-MdR">
+                                        <rect key="frame" x="21" y="-3" width="71" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                        <state key="normal" title="Rejected">
+                                            <color key="titleColor" red="0.76470588240000004" green="0.35294117650000001" blue="0.46274509800000002" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rejectedButtonTap:" destination="bZT-Vz-JsT" eventType="touchUpInside" id="iyc-m2-xRT"/>
+                                        </connections>
+                                    </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Reject white" id="G14-dT-rwQ">
+                                        <rect key="frame" x="14" y="8" width="8" height="8"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="R0U-OJ-YFj"/>
                     <connections>
-                        <segue destination="nvY-IU-4YU" kind="relationship" relationship="viewControllers" id="6CW-eD-Wmq"/>
+                        <outlet property="acceptButton" destination="0mz-Ht-Ct0" id="27d-Re-FPK"/>
+                        <outlet property="acceptGreenIcon" destination="zEa-3N-EwQ" id="fEP-fB-IAx"/>
+                        <outlet property="acceptWhiteIcon" destination="6LH-vR-1OT" id="qHb-GT-98V"/>
+                        <outlet property="acceptedView" destination="x9h-z2-EKk" id="rid-qK-FBK"/>
+                        <outlet property="laterButton" destination="EE8-4I-CFV" id="FiA-y1-DEZ"/>
+                        <outlet property="laterOrangeIcon" destination="3l7-gb-SnW" id="SYB-Yw-vVR"/>
+                        <outlet property="laterView" destination="Rkc-4U-PLE" id="MS5-gd-WUq"/>
+                        <outlet property="laterWhiteIcon" destination="lvH-HC-0ro" id="YTy-Qb-sPp"/>
+                        <outlet property="listTableView" destination="fH2-ov-6BQ" id="mIW-Tz-XPe"/>
+                        <outlet property="rejectRedIcon" destination="bCZ-bZ-q0a" id="G96-Mf-R3P"/>
+                        <outlet property="rejectWhiteIcon" destination="G14-dT-rwQ" id="l0z-eO-dDl"/>
+                        <outlet property="rejectedButton" destination="Zvq-g4-MdR" id="Fhu-vz-MJw"/>
+                        <outlet property="rejectedView" destination="Zrq-aR-yO7" id="iTl-qa-RcV"/>
                     </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SFQ-S9-dK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qXr-ec-9Sq" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="413" y="996"/>
+            <point key="canvasLocation" x="993" y="978"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nvH-CN-itF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="lrn-nX-LSl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rVV-sT-swG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bZT-Vz-JsT" kind="relationship" relationship="rootViewController" id="iYH-qs-DZY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5CV-Je-4PP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616" y="978"/>
         </scene>
     </scenes>
     <resources>
         <image name="Accept" width="59" height="59"/>
+        <image name="Accept_small" width="30" height="30"/>
         <image name="Accepted Status" width="126" height="164"/>
+        <image name="Background" width="320" height="568"/>
         <image name="Briefcase" width="14" height="12"/>
         <image name="Building" width="14" height="14"/>
+        <image name="Checkmark Copy" width="9" height="8"/>
+        <image name="Checkmark White" width="9" height="8"/>
         <image name="Filter" width="14" height="16"/>
         <image name="Home" width="14" height="14"/>
         <image name="Key" width="14" height="14"/>
         <image name="Later" width="46" height="46"/>
         <image name="Later Status" width="106" height="158"/>
+        <image name="Later_Icon" width="9" height="9"/>
+        <image name="Later_Icon_orange" width="9" height="9"/>
+        <image name="Later_small30" width="30" height="30"/>
         <image name="Mail" width="14" height="11"/>
         <image name="Phone" width="14" height="14"/>
         <image name="Reject" width="59" height="59"/>
+        <image name="Reject white" width="8" height="8"/>
+        <image name="Reject_small" width="30" height="30"/>
         <image name="Rejected Status" width="115" height="164"/>
         <image name="Write_button" width="13" height="13"/>
+        <image name="X Copy 2" width="8" height="8"/>
         <image name="account_view_nav" width="35" height="35"/>
         <image name="account_view_nav_selected" width="35" height="35"/>
         <image name="card_view_nav" width="35" height="34"/>

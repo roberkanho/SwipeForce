@@ -19,9 +19,10 @@
 		8615C9791B2CC35B00AC0602 /* swipeforceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615C9781B2CC35B00AC0602 /* swipeforceTests.swift */; };
 		8615C9831B2CC47400AC0602 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615C9821B2CC47400AC0602 /* DetailViewController.swift */; };
 		8615C9851B2CC48800AC0602 /* MainCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615C9841B2CC48800AC0602 /* MainCardViewController.swift */; };
-		8615C9871B2CC49500AC0602 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615C9861B2CC49500AC0602 /* ListViewController.swift */; };
 		8615C98A1B2CC66000AC0602 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615C9891B2CC66000AC0602 /* Common.swift */; };
 		8615C98C1B2CD12600AC0602 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8615C98B1B2CD12600AC0602 /* Podfile */; };
+		E4C7C6291B391BAE00B190FD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C7C6281B391BAE00B190FD /* ListViewController.swift */; };
+		E4C7C62B1B391C1600B190FD /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C7C62A1B391C1600B190FD /* ListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,11 +52,12 @@
 		8615C9781B2CC35B00AC0602 /* swipeforceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swipeforceTests.swift; sourceTree = "<group>"; };
 		8615C9821B2CC47400AC0602 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8615C9841B2CC48800AC0602 /* MainCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCardViewController.swift; sourceTree = "<group>"; };
-		8615C9861B2CC49500AC0602 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		8615C9891B2CC66000AC0602 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		8615C98B1B2CD12600AC0602 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A312F7F1B0A3FFF9FBCF0B02 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C6E22B8B62D75E4790863F97 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4C7C6281B391BAE00B190FD /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = ../ListViewController.swift; sourceTree = "<group>"; };
+		E4C7C62A1B391C1600B190FD /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +164,9 @@
 			isa = PBXGroup;
 			children = (
 				8615C9821B2CC47400AC0602 /* DetailViewController.swift */,
+				E4C7C6281B391BAE00B190FD /* ListViewController.swift */,
 				8615C9841B2CC48800AC0602 /* MainCardViewController.swift */,
-				8615C9861B2CC49500AC0602 /* ListViewController.swift */,
+				E4C7C62A1B391C1600B190FD /* ListCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -331,9 +334,10 @@
 				8615C9831B2CC47400AC0602 /* DetailViewController.swift in Sources */,
 				037403C11B35F8EB00E02B10 /* FadeTransition.swift in Sources */,
 				8615C9851B2CC48800AC0602 /* MainCardViewController.swift in Sources */,
+				E4C7C62B1B391C1600B190FD /* ListCell.swift in Sources */,
 				03B92B7E1B3549C400639E7E /* AccountViewController.swift in Sources */,
 				8615C9651B2CC35B00AC0602 /* ViewController.swift in Sources */,
-				8615C9871B2CC49500AC0602 /* ListViewController.swift in Sources */,
+				E4C7C6291B391BAE00B190FD /* ListViewController.swift in Sources */,
 				037403C01B35F8EB00E02B10 /* BaseTransition.swift in Sources */,
 				8615C98A1B2CC66000AC0602 /* Common.swift in Sources */,
 				8615C9631B2CC35B00AC0602 /* AppDelegate.swift in Sources */,

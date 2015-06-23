@@ -9,7 +9,7 @@
 import UIKit
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var listTableView: UITableView!
     @IBOutlet weak var acceptedView: UIView!
     @IBOutlet weak var rejectedView: UIView!
@@ -57,7 +57,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         acceptWhiteIcon.alpha = 0
         rejectWhiteIcon.alpha = 0
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -73,7 +73,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         } else {
             return self.namesRejected.count
         }
-    
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -93,7 +93,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.titleLabel.text = titlesRejected[indexPath.row]
             cell.companyLabel.text = companiesRejected[indexPath.row]
         }
-    
+        
         cell.listViewController = self
         return cell
     }
@@ -209,7 +209,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         rejectRedIcon.alpha = 1
         rejectWhiteIcon.alpha = 0
     }
-
+    
     @IBAction func rejectedButtonTap(sender: AnyObject) {
         listSelect = 0
         listSelectGlobal.setInteger(listSelect, forKey: "list")
@@ -232,12 +232,12 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
