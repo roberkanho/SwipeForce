@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		037403C01B35F8EB00E02B10 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037403BE1B35F8EB00E02B10 /* BaseTransition.swift */; };
+		037403C11B35F8EB00E02B10 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037403BF1B35F8EB00E02B10 /* FadeTransition.swift */; };
+		03B92B7E1B3549C400639E7E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B92B7D1B3549C400639E7E /* AccountViewController.swift */; };
 		22F0DD983B86459F422E94E6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E22B8B62D75E4790863F97 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8615C9631B2CC35B00AC0602 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615C9621B2CC35B00AC0602 /* AppDelegate.swift */; };
 		8615C9651B2CC35B00AC0602 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615C9641B2CC35B00AC0602 /* ViewController.swift */; };
@@ -32,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		037403BE1B35F8EB00E02B10 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		037403BF1B35F8EB00E02B10 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		03B92B7D1B3549C400639E7E /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		5BBEC2DFDA0E9E8864E45212 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8615C95D1B2CC35B00AC0602 /* swipeforce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swipeforce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8615C9611B2CC35B00AC0602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,7 +53,7 @@
 		8615C9841B2CC48800AC0602 /* MainCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCardViewController.swift; sourceTree = "<group>"; };
 		8615C9861B2CC49500AC0602 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		8615C9891B2CC66000AC0602 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		8615C98B1B2CD12600AC0602 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		8615C98B1B2CD12600AC0602 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A312F7F1B0A3FFF9FBCF0B02 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C6E22B8B62D75E4790863F97 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		037403C21B35F8F000E02B10 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				037403BE1B35F8EB00E02B10 /* BaseTransition.swift */,
+				037403BF1B35F8EB00E02B10 /* FadeTransition.swift */,
+			);
+			name = Transitions;
+			sourceTree = "<group>";
+		};
 		24D565ED4A5DE4C17DB96056 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,9 +120,11 @@
 		8615C95F1B2CC35B00AC0602 /* swipeforce */ = {
 			isa = PBXGroup;
 			children = (
+				037403C21B35F8F000E02B10 /* Transitions */,
 				8615C9621B2CC35B00AC0602 /* AppDelegate.swift */,
 				8615C9641B2CC35B00AC0602 /* ViewController.swift */,
 				8615C9661B2CC35B00AC0602 /* Main.storyboard */,
+				03B92B7D1B3549C400639E7E /* AccountViewController.swift */,
 				8615C9881B2CC4A100AC0602 /* Controllers */,
 				8615C9691B2CC35B00AC0602 /* Images.xcassets */,
 				8615C96B1B2CC35B00AC0602 /* LaunchScreen.xib */,
@@ -312,9 +329,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8615C9831B2CC47400AC0602 /* DetailViewController.swift in Sources */,
+				037403C11B35F8EB00E02B10 /* FadeTransition.swift in Sources */,
 				8615C9851B2CC48800AC0602 /* MainCardViewController.swift in Sources */,
+				03B92B7E1B3549C400639E7E /* AccountViewController.swift in Sources */,
 				8615C9651B2CC35B00AC0602 /* ViewController.swift in Sources */,
 				8615C9871B2CC49500AC0602 /* ListViewController.swift in Sources */,
+				037403C01B35F8EB00E02B10 /* BaseTransition.swift in Sources */,
 				8615C98A1B2CC66000AC0602 /* Common.swift in Sources */,
 				8615C9631B2CC35B00AC0602 /* AppDelegate.swift in Sources */,
 			);
