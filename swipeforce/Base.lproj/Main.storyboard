@@ -4,6 +4,57 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
+        <!--Account View Controller-->
+        <scene sceneID="Ha6-II-ReC">
+            <objects>
+                <viewController id="Nzi-7Z-2ux" customClass="AccountViewController" customModule="swipeforce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UrD-cU-3Q8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="OZg-V4-yR4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="4He-Mj-mYA" userLabel="Nav">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="card_view_nav" id="FV4-Cc-uCB">
+                                                <rect key="frame" x="18" y="30" width="35" height="34"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Y0W-Tw-1ud" appends="YES" id="bDs-XT-V9V"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="list_view_nav" id="2mZ-5f-W7f">
+                                                <rect key="frame" x="143" y="30" width="35" height="35"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="account_view_nav_selected" id="0Pn-7e-Lv6">
+                                                <rect key="frame" x="267" y="30" width="35" height="35"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <gestureRecognizers/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uyt-bI-zSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Y0W-Tw-1ud">
+                    <connections>
+                        <action selector="onTap:" destination="Nzi-7Z-2ux" id="kVB-g8-tFM"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="234" y="-382"/>
+        </scene>
         <!--Main Card View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -12,17 +63,411 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1DP-Fc-qXX">
+                            <view contentMode="scaleToFill" id="g4u-GQ-oy9" userLabel="Background Image">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="cWc-Tm-qQX">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" id="bVW-b4-WSD" userLabel="Background Image Overlay">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" id="HLA-6b-S30" userLabel="Fourth Card View">
+                                <rect key="frame" x="38" y="75" width="244" height="375"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="YXQ-VR-9c0" userLabel="Card Background">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image" id="XDx-dJ-d9Y" userLabel="Photo Image">
+                                                <rect key="frame" x="106" y="23" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zBe-gA-7c6" userLabel="Lead Name">
+                                                <rect key="frame" x="18" y="129" width="277" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="aYT-pF-n5S" userLabel="Label">
+                                                <rect key="frame" x="78" y="159" width="172" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qfQ-qh-vhK" userLabel="Label Name">
+                                                        <rect key="frame" x="65" y="4" width="42" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" id="KnA-eM-ocy" userLabel="Tag">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="29"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                </subviews>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view alpha="0.0" contentMode="scaleToFill" id="8K8-uc-XXZ" userLabel="Card Overlay">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="393"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Accepted Status" id="Lzq-oT-1dd">
+                                                <rect key="frame" x="93" y="115" width="126" height="164"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Later Status" id="5NY-nD-k2n">
+                                                <rect key="frame" x="103" y="115" width="106" height="158"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Rejected Status" id="3jK-fk-eCh">
+                                                <rect key="frame" x="99" y="115" width="115" height="164"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="XpJ-za-Yk1" appends="YES" id="FJT-i1-51f"/>
+                                </connections>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" id="Lps-Ok-ZWA" userLabel="Third Card View">
+                                <rect key="frame" x="30" y="82" width="260" height="375"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="RKx-D1-Tje" userLabel="Card Background">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image" id="W7t-Pc-0J2" userLabel="Photo Image">
+                                                <rect key="frame" x="106" y="23" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Okr-DL-JMG" userLabel="Lead Name">
+                                                <rect key="frame" x="18" y="129" width="277" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="zhb-rz-zH1" userLabel="Label">
+                                                <rect key="frame" x="78" y="159" width="172" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7c1-e5-Odg" userLabel="Label Name">
+                                                        <rect key="frame" x="65" y="4" width="42" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" id="W4A-Tf-BtR" userLabel="Tag">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="29"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                </subviews>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.2666666667" green="0.66666666669999997" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view alpha="0.0" contentMode="scaleToFill" id="WLY-lN-uhc" userLabel="Card Overlay">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="393"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Accepted Status" id="qY8-C9-PNR">
+                                                <rect key="frame" x="93" y="115" width="126" height="164"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Later Status" id="Msw-r5-bQn">
+                                                <rect key="frame" x="103" y="115" width="106" height="158"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Rejected Status" id="ecH-V5-XgO">
+                                                <rect key="frame" x="99" y="115" width="115" height="164"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.2116514488" blue="0.1764744925" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="XpJ-za-Yk1" appends="YES" id="kGo-Pk-8IP"/>
+                                </connections>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" id="aY6-Yz-U7G" userLabel="Second Card View">
+                                <rect key="frame" x="20" y="91" width="280" height="375"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="Qtl-yB-VLO" userLabel="Card Background">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image" id="2RP-Dp-FyA" userLabel="Photo Image">
+                                                <rect key="frame" x="106" y="23" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Od-o0-JLp" userLabel="Lead Name">
+                                                <rect key="frame" x="18" y="129" width="277" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="pyq-Hk-TyO" userLabel="Label">
+                                                <rect key="frame" x="78" y="159" width="172" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UzK-Qq-kJH" userLabel="Label Name">
+                                                        <rect key="frame" x="65" y="4" width="42" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" id="ZL5-OJ-66M" userLabel="Tag">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="29"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                </subviews>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view alpha="0.0" contentMode="scaleToFill" id="l1s-GF-PaZ" userLabel="Card Overlay">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="393"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Accepted Status" id="mcl-tz-KGJ">
+                                                <rect key="frame" x="93" y="115" width="126" height="164"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Later Status" id="0TH-nw-K9X">
+                                                <rect key="frame" x="103" y="115" width="106" height="158"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Rejected Status" id="57a-0o-ZFf">
+                                                <rect key="frame" x="99" y="115" width="115" height="164"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.60909231090000004" green="0.50588235290000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="XpJ-za-Yk1" appends="YES" id="NyA-kJ-FWW"/>
+                                    <outletCollection property="gestureRecognizers" destination="TZ1-eR-cP9" appends="YES" id="plY-OL-oTt"/>
+                                </connections>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" id="2cz-0N-Iqm" userLabel="First Card View">
+                                <rect key="frame" x="12" y="100" width="296" height="375"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="Hzn-ne-JLy" userLabel="Card Background">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image" id="q3g-CX-jhg" userLabel="Photo Image">
+                                                <rect key="frame" x="106" y="23" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sBh-Xo-jiO" userLabel="Lead Name">
+                                                <rect key="frame" x="18" y="129" width="277" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="XWe-ew-CTm" userLabel="Label">
+                                                <rect key="frame" x="78" y="159" width="172" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pBu-ZK-VYf" userLabel="Label Name">
+                                                        <rect key="frame" x="65" y="4" width="42" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" id="xpS-FL-0bk" userLabel="Tag">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="29"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                </subviews>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="EJM-fk-NAJ" userLabel="Card Overlay">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="393"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Accepted Status" id="CUu-lL-oTB">
+                                                <rect key="frame" x="93" y="115" width="126" height="164"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Later Status" id="k0a-2j-a8r">
+                                                <rect key="frame" x="103" y="115" width="106" height="158"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Rejected Status" id="6gD-SH-uoN">
+                                                <rect key="frame" x="99" y="115" width="115" height="164"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="XpJ-za-Yk1" appends="YES" id="fXu-Og-vke"/>
+                                    <outletCollection property="gestureRecognizers" destination="TZ1-eR-cP9" appends="YES" id="vy2-yc-X5J"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" id="s0A-xO-9Bf" userLabel="Action Buttons View">
+                                <rect key="frame" x="0.0" y="479" width="320" height="90"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Accept" id="YV7-gY-HN1">
+                                        <rect key="frame" x="177" y="14" width="59" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="euK-d7-5lp" appends="YES" id="S9B-XR-uWm"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Reject" id="HBO-Qp-0fg">
+                                        <rect key="frame" x="84" y="14" width="59" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="YEN-Au-3F7" appends="YES" id="9f0-mi-mMM"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Later" id="W7M-0A-yj5">
+                                        <rect key="frame" x="137" y="21" width="46" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="DIn-yy-wDw" appends="YES" id="nHL-bJ-Jcu"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" id="LBH-Uz-6yY" userLabel="Nav">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="card_view_nav_selected" id="3X8-LY-Zcl">
+                                        <rect key="frame" x="18" y="30" width="35" height="34"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="account_view_nav" id="tEE-WB-Xsn">
+                                        <rect key="frame" x="267" y="30" width="35" height="35"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="HQr-5M-azu" appends="YES" id="9pf-us-Yzh"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="list_view_nav" id="uP4-eV-Ock">
+                                        <rect key="frame" x="143" y="30" width="35" height="35"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="VOJ-O8-Heh"/>
+                    <connections>
+                        <outlet property="actionButtonsView" destination="s0A-xO-9Bf" id="d2l-cD-CCv"/>
+                        <outlet property="cardBackground" destination="Hzn-ne-JLy" id="19g-Rr-l7s"/>
+                        <outlet property="cardBackgroundImage" destination="cWc-Tm-qQX" id="6Wa-Ql-7nR"/>
+                        <outlet property="cardBackgroundOverlay" destination="bVW-b4-WSD" id="ouW-2I-ipi"/>
+                        <outlet property="cardBackgroundView" destination="g4u-GQ-oy9" id="ptD-h0-gS1"/>
+                        <outlet property="firstCard" destination="2cz-0N-Iqm" id="RTa-Qn-NRP"/>
+                        <outlet property="firstCardAcceptedImage" destination="CUu-lL-oTB" id="SPj-FO-p7U"/>
+                        <outlet property="firstCardLaterImage" destination="k0a-2j-a8r" id="cQh-ZP-mUd"/>
+                        <outlet property="firstCardOverlay" destination="EJM-fk-NAJ" id="IwF-j1-HPY"/>
+                        <outlet property="firstCardRejectedImage" destination="6gD-SH-uoN" id="cIU-C6-1R7"/>
+                        <outlet property="fourthCard" destination="HLA-6b-S30" id="IcE-ja-WQ6"/>
+                        <outlet property="fourthCardAcceptedImage" destination="Lzq-oT-1dd" id="yoN-My-pbj"/>
+                        <outlet property="fourthCardLaterImage" destination="5NY-nD-k2n" id="P5D-Mc-Oc5"/>
+                        <outlet property="fourthCardOverlay" destination="8K8-uc-XXZ" id="X0H-15-Vn2"/>
+                        <outlet property="fourthCardRejectedImage" destination="3jK-fk-eCh" id="iex-JW-YcT"/>
+                        <outlet property="labelLabel" destination="pBu-ZK-VYf" id="wAR-IO-RWZ"/>
+                        <outlet property="labelView" destination="XWe-ew-CTm" id="cSX-1z-6Ks"/>
+                        <outlet property="nameLabel" destination="sBh-Xo-jiO" id="yPX-Ec-sGu"/>
+                        <outlet property="photoImage" destination="q3g-CX-jhg" id="Ueh-Sj-Euy"/>
+                        <outlet property="secondCard" destination="aY6-Yz-U7G" id="I8F-8R-0gh"/>
+                        <outlet property="secondCardAcceptedImage" destination="mcl-tz-KGJ" id="16k-A4-2Ky"/>
+                        <outlet property="secondCardLaterImage" destination="0TH-nw-K9X" id="FsH-wc-fkz"/>
+                        <outlet property="secondCardOverlay" destination="l1s-GF-PaZ" id="V1q-GT-1XU"/>
+                        <outlet property="secondCardRejectedImage" destination="57a-0o-ZFf" id="BNO-rq-Foi"/>
+                        <outlet property="tagView" destination="EJM-fk-NAJ" id="sn2-Fl-mJs"/>
+                        <outlet property="thirdCard" destination="Lps-Ok-ZWA" id="Yac-Mt-ffp"/>
+                        <outlet property="thirdCardAccptedImage" destination="qY8-C9-PNR" id="S7w-3e-MaO"/>
+                        <outlet property="thirdCardLaterImage" destination="Msw-r5-bQn" id="d2m-EE-JDl"/>
+                        <outlet property="thirdCardOverlay" destination="WLY-lN-uhc" id="9Jk-Yv-Fss"/>
+                        <outlet property="thirdCardRejectedImage" destination="ecH-V5-XgO" id="J8D-9v-2Je"/>
+                        <segue destination="WDW-cB-v3f" kind="modal" identifier="card2DetailSegue" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="rTJ-Xg-Y5N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="XpJ-za-Yk1">
+                    <connections>
+                        <action selector="onPanCard:" destination="vXZ-lx-hvc" id="Rg9-31-ukZ"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="HQr-5M-azu">
+                    <connections>
+                        <segue destination="Nzi-7Z-2ux" kind="modal" modalTransitionStyle="partialCurl" animates="NO" id="1QX-Lh-wnP"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="euK-d7-5lp">
+                    <connections>
+                        <action selector="onTapAccept:" destination="vXZ-lx-hvc" id="4gI-IZ-kX2"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="YEN-Au-3F7">
+                    <connections>
+                        <action selector="onTapRejected:" destination="vXZ-lx-hvc" id="cbi-o2-XUW"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="DIn-yy-wDw">
+                    <connections>
+                        <action selector="onTapLater:" destination="vXZ-lx-hvc" id="RBm-aV-HHX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="TZ1-eR-cP9">
+                    <connections>
+                        <action selector="onTapCard:" destination="vXZ-lx-hvc" id="hYI-Uy-4Yi"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="234.66666666666666" y="320.92000000000002"/>
+            <point key="canvasLocation" x="234" y="320"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="XQE-Np-VX9">
@@ -45,14 +490,308 @@
                     <view key="view" contentMode="scaleToFill" id="ZTA-ml-U92">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="a5q-2U-1QR" userLabel="Background Image">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="qk4-1m-dkZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" id="mRp-Eg-AWO" userLabel="Background Image Overlay">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="0IK-zK-WhN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="tQt-SZ-Bn0" userLabel="Title Card Background">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="249"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aAH-fF-wq6" userLabel="Lead Name">
+                                                <rect key="frame" x="21" y="177" width="277" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="XZu-7O-ULf" userLabel="Done Bar">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P3H-Mv-Aov">
+                                                        <rect key="frame" x="13" y="25" width="37" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Done">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onTapDone:" destination="WDW-cB-v3f" eventType="touchUpInside" id="CpE-Gj-YWC"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="0.70000000000000007" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="aJq-MH-axy">
+                                                <rect key="frame" x="110" y="71" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" id="7DV-d9-jBr">
+                                                <rect key="frame" x="0.0" y="202" width="320" height="47"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Mail" id="gbE-Wl-r6v">
+                                                        <rect key="frame" x="50" y="18" width="14" height="11"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </imageView>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Phone" id="R8u-mn-XVP">
+                                                        <rect key="frame" x="153" y="17" width="14" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </imageView>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Write_button" id="zV8-dc-FCa">
+                                                        <rect key="frame" x="257" y="17" width="13" height="13"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="lOA-kB-lcO" userLabel="Personal Info Panel">
+                                        <rect key="frame" x="16" y="257" width="288" height="142"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ocp-I8-nBm">
+                                                <rect key="frame" x="8" y="5" width="101" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="pJO-I8-69V">
+                                                <rect key="frame" x="0.0" y="33" width="288" height="104"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Briefcase" id="3bE-B0-Xhx">
+                                                        <rect key="frame" x="11" y="16" width="14" height="12"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </imageView>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Building" id="gGq-Lh-mX1">
+                                                        <rect key="frame" x="11" y="43" width="14" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </imageView>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Home" id="eS5-Ws-WcV">
+                                                        <rect key="frame" x="11" y="70" width="14" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Oec-Tc-Okb">
+                                                        <rect key="frame" x="39" y="11" width="241" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JeQ-uh-mEh">
+                                                        <rect key="frame" x="39" y="39" width="241" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bfo-Ov-MAB">
+                                                        <rect key="frame" x="39" y="67" width="241" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="6jy-zX-Qap" userLabel="Lead Info Panel">
+                                        <rect key="frame" x="16" y="407" width="288" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lead Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TIi-rF-bnN" userLabel="Contact Info">
+                                                <rect key="frame" x="8" y="5" width="101" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="dwy-bd-F87">
+                                                <rect key="frame" x="0.0" y="33" width="288" height="77"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Filter" id="t2W-M4-g1J">
+                                                        <rect key="frame" x="12" y="19" width="14" height="11"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </imageView>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Key" id="F8i-xI-oo4">
+                                                        <rect key="frame" x="12" y="43" width="14" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lead Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n6D-I9-bGc">
+                                                        <rect key="frame" x="39" y="13" width="230" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lead Source" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sF9-0t-Yl4">
+                                                        <rect key="frame" x="39" y="39" width="79" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="gAt-mm-7rJ" userLabel="Contact Info Panel">
+                                        <rect key="frame" x="16" y="527" width="288" height="195"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3rF-xO-XiG" userLabel="Contact Info">
+                                                <rect key="frame" x="8" y="5" width="101" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="I9t-9S-E9r">
+                                                <rect key="frame" x="0.0" y="33" width="288" height="77"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Mail" id="2bm-tD-175">
+                                                        <rect key="frame" x="12" y="19" width="14" height="11"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </imageView>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Phone" id="Ap8-Wl-fqH">
+                                                        <rect key="frame" x="12" y="43" width="14" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tdk-FX-CgH">
+                                                        <rect key="frame" x="39" y="13" width="241" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ajD-As-gH9">
+                                                        <rect key="frame" x="39" y="39" width="241" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                            <view contentMode="scaleToFill" id="OSU-w8-Asx" userLabel="Action Buttons View">
+                                <rect key="frame" x="0.0" y="479" width="320" height="90"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Accept" id="msT-6Z-v00">
+                                        <rect key="frame" x="177" y="14" width="59" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="jP3-Fd-L7t" appends="YES" id="5IJ-NR-uA4"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Reject" id="FB2-FK-aiN">
+                                        <rect key="frame" x="84" y="14" width="59" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Later" id="Vvy-yK-n6h">
+                                        <rect key="frame" x="137" y="21" width="46" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="GyK-z1-r71" appends="YES" id="Puj-30-iIP"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="aa8-uv-PX3" appends="YES" id="hwT-lq-rLD"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="actionButtonsView" destination="OSU-w8-Asx" id="6PB-si-p6v"/>
+                        <outlet property="backgroundImage" destination="qk4-1m-dkZ" id="m6k-om-jJQ"/>
+                        <outlet property="backgroundImageOverlay" destination="mRp-Eg-AWO" id="MUM-H7-2Qo"/>
+                        <outlet property="cardBackgroundView" destination="tQt-SZ-Bn0" id="tv2-uy-nhT"/>
+                        <outlet property="contactInfoPanel" destination="gAt-mm-7rJ" id="9Em-ic-t21"/>
+                        <outlet property="leadInfoPanel" destination="6jy-zX-Qap" id="Obc-WG-AUf"/>
+                        <outlet property="nameLabel" destination="aAH-fF-wq6" id="XLt-iT-Rmd"/>
+                        <outlet property="personalInfoCard" destination="pJO-I8-69V" id="PbV-n0-oB7"/>
+                        <outlet property="personalInfoPanel" destination="lOA-kB-lcO" id="qa1-nr-wHl"/>
+                        <outlet property="photoImage" destination="aJq-MH-axy" id="tlC-Po-bKF"/>
+                        <outlet property="scrollView" destination="0IK-zK-WhN" id="x9B-ZW-0ug"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sth-jK-2ZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="aa8-uv-PX3">
+                    <connections>
+                        <action selector="onTapDone:" destination="WDW-cB-v3f" id="wMB-GR-3Du"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="jP3-Fd-L7t">
+                    <connections>
+                        <action selector="onTapAccept:" destination="WDW-cB-v3f" id="6Sj-FY-XHj"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="GyK-z1-r71"/>
             </objects>
             <point key="canvasLocation" x="671" y="320"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Accept" width="59" height="59"/>
+        <image name="Accepted Status" width="126" height="164"/>
+        <image name="Briefcase" width="14" height="12"/>
+        <image name="Building" width="14" height="14"/>
+        <image name="Filter" width="14" height="16"/>
+        <image name="Home" width="14" height="14"/>
+        <image name="Key" width="14" height="14"/>
+        <image name="Later" width="46" height="46"/>
+        <image name="Later Status" width="106" height="158"/>
+        <image name="Mail" width="14" height="11"/>
+        <image name="Phone" width="14" height="14"/>
+        <image name="Reject" width="59" height="59"/>
+        <image name="Rejected Status" width="115" height="164"/>
+        <image name="Write_button" width="13" height="13"/>
+        <image name="account_view_nav" width="35" height="35"/>
+        <image name="account_view_nav_selected" width="35" height="35"/>
+        <image name="card_view_nav" width="35" height="34"/>
+        <image name="card_view_nav_selected" width="35" height="34"/>
+        <image name="list_view_nav" width="35" height="35"/>
+        <image name="profile_image" width="75" height="63"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
